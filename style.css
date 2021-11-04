@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&family=Roboto:wght@300;400;500&display=swap');
+
+body{
+    font-family: Roboto Condensed;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 23px;
+    padding-top: 52px;
+}
+header{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    color: #D00303;
+    font-size: 25px;
+    line-height: 30px;
+    border: 1px solid #E5E5E5;
+    box-sizing: border-box;
+    padding: 10px;
+    position: fixed;
+    top: 0;
+    background-color: #fff;
+
+}
+main{
+    display: flex;
+    flex-direction: column;
+}
+.pratos{
+    margin: 5px;
+}
+.categoria{
+    font-weight: 500;
+    font-size: 1.125rem;
+    padding: 0px 20px 10px 5px;
+    color: #3f3e3e;
+}
+.menu-pratos{
+    display: flex;
+    overflow-x: scroll;
+}
+
+.pratos-opcao{
+    margin-right: 13px;
+    margin-bottom: 30px;
+    padding: 0 10px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.pratos-opcao:hover{
+    border: 3px solid #D00303;
+}
+img{
+    margin: 5px;
+    width: 120px;
+    height: 120px;
+}
+.nome-prato{
+    color: #3e3e3e;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.25rem;
+    margin-top: 0
+}
+.descricao-prato{
+    font-size: 0.75rem;
+    line-height: 1rem;
+    font-weight: lighter;
+    color: #717171;
+    word-break: break-word;
+}
+.finalizar-pedido{
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+button{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    border-radius: inherit;
+    background-color: #ea1d2c;
+    color: #ffffff;
+    height: 50px;
+    font-family: inherit;
+    font-size: 100%;
+    line-height: 1.15;
+    
+}
+button:hover{
+    filter: brightness(110%);
+}
