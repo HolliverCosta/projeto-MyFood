@@ -18,75 +18,139 @@
                 <p><strong>Escolha seu prato</strong></p>
             </div>
             <div class="menu-pratos">
-                <div class="pratos-opcao">
+                <div name="pratosSelect" class="pratos-opcao p1" onclick="getPrato(1, 15.00)">
                     <img src="./imagens/Que-comida-saudável-que-nada-brasileiro-gosta-de-fast-food.jpg" alt="">
                     <p class="nome-prato">Hamburguer</p>
                     <p class="descricao-prato">acompanha batata frita</p>
+                    <p>R$15.00</p>
                 </div>
-                <div class="pratos-opcao">
+                <div name="pratosSelect" class="pratos-opcao p2" onclick="getPrato(2, 25.00)">
                     <img src="./imagens/download.jpeg" alt="">
-                    <p class="nome-prato" >Hamburguer</p>
-                    <p class="descricao-prato">acompanha batata frita</p>
+                    <p class="nome-prato" >Frango</p>
+                    <p class="descricao-prato">acompanha batata frita e salada</p>
+                    <p>R$25.00</p>
                 </div>
-                <div class="pratos-opcao">
+                <div name="pratosSelect" class="pratos-opcao p3" onclick="getPrato(3, 30.00)">
                     <img src="./imagens/adesivo-parede-restaurante-prato-feito-comida-caseira-lenha-adesivo-restaurante-fritas-salada.jpg" alt="">
-                    <p class="nome-prato">Hamburguer</p>
-                    <p class="descricao-prato">acompanha batata frita</p>
+                    <p class="nome-prato">Carne</p>
+                    <p class="descricao-prato">acompanha batata frita, feijão e arroz</p>
+                    <p>R$30.00</p>
                 </div>
             </div>
             
         </div>
                 
-        <div class="pratos">
+        <div class="bebidas">
             <div class="categoria">
                 <p><strong>Escolha sua bebida</strong></p>
             </div>
-            <div class="menu-pratos">
-                <div class="pratos-opcao">
-                    <img src="./imagens/Que-comida-saudável-que-nada-brasileiro-gosta-de-fast-food.jpg" alt="">
-                    <p class="nome-prato">Hamburguer</p>
-                    <p class="descricao-prato">acompanha batata frita</p>
+            <div class="menu-bebidas">
+                <div class="bebidas-opcao">
+                    <img src="./imagens/absolut.jpg" alt="">
+                    <p class="nome-prato">Absolut</p>
+                    <p class="descricao-prato">vodka</p>
+                    <p>R$80.00</p>
                 </div>
-                <div class="pratos-opcao">
-                    <img src="./imagens/download.jpeg" alt="">
-                    <p class="nome-prato" >Hamburguer</p>
-                    <p class="descricao-prato">acompanha batata frita</p>
+                <div class="bebidas-opcao">
+                    <img src="./imagens/ice.jpeg" alt="">
+                    <p class="nome-prato" >51 Ice</p>
+                    <p class="descricao-prato">vodka</p>
+                    <p>R$7.00</p>
                 </div>
-                <div class="pratos-opcao">
-                    <img src="./imagens/adesivo-parede-restaurante-prato-feito-comida-caseira-lenha-adesivo-restaurante-fritas-salada.jpg" alt="">
-                    <p class="nome-prato">Hamburguer</p>
-                    <p class="descricao-prato">acompanha batata frita</p>
+                <div class="bebidas-opcao">
+                    <img src="./imagens/stock.jpeg" alt="">
+                    <p class="nome-prato">Stock</p>
+                    <p class="descricao-prato">Gin</p>
+                    <p>R$25.00</p>
                 </div>
             </div>
             
         </div>
 
-        <div class="pratos">
+        <div class="sobremesas">
             <div class="categoria">
                 <p><strong>Escolha sua sobremesa</strong></p>
             </div>
-            <div class="menu-pratos">
-                <div class="pratos-opcao">
-                    <img src="./imagens/Que-comida-saudável-que-nada-brasileiro-gosta-de-fast-food.jpg" alt="">
-                    <p class="nome-prato">Hamburguer</p>
-                    <p class="descricao-prato">acompanha batata frita</p>
+            <div class="menu-sobremesas">
+                <div class="sobremesas-opcao">
+                    <img src="./imagens/maracuja.jpg" alt="">
+                    <p class="nome-prato">Mousse de maracujá</p>
+                    <p>R$12.00</p>
                 </div>
-                <div class="pratos-opcao">
-                    <img src="./imagens/download.jpeg" alt="">
-                    <p class="nome-prato" >Hamburguer</p>
-                    <p class="descricao-prato">acompanha batata frita</p>
+                <div class="sobremesas-opcao">
+                    <img src="./imagens/pavê.jpeg" alt="">
+                    <p class="nome-prato" >Pavê</p>
+                    <p>R$9.00</p>
                 </div>
-                <div class="pratos-opcao">
-                    <img src="./imagens/adesivo-parede-restaurante-prato-feito-comida-caseira-lenha-adesivo-restaurante-fritas-salada.jpg" alt="">
-                    <p class="nome-prato">Hamburguer</p>
-                    <p class="descricao-prato">acompanha batata frita</p>
+                <div class="sobremesas-opcao">
+                    <img src="./imagens/doce_morango.jpeg" alt="">
+                    <p class="nome-prato">Doce de morango</p>
+                    <p>R$10.00</p>
                 </div>
             </div>
         </div>
         <div class="finalizar-pedido">
-            <button>Finalizar pedido</button>
+            <div class="valor">
+                <p class="valorTotal">Valor Total: R$0.00</p>
+                <p></p>
+            </div>
+            <div>
+                <button onclick="calculaValor()">Finalizar pedido</button>
+            </div>
+            
         </div>
-       
     </main>
+    <script>
+        let bebida = false;
+        let prato = false;
+        let sobremesa = false;
+
+        let valor_prato = 0;
+        let valor_bebida = 0;
+        let valor_sobremesa = 0;
+
+        let valorTotal = 0.00;
+    
+        function getPrato(preco, posicao){
+            const pratos = document.getElementsByName("pratosSelect");
+
+            pratos.forEach(elemento => {
+                if(document.getElementsByClassName("selecionado")){
+                    elemento.classList.remove("selecionado");
+                    valor_prato = 0;
+                }
+            });
+            if(!prato){
+                const elemento = document.querySelector(".p" + posicao);
+                elemento.classList.add("selecionado");
+                valor_prato = preco;
+                prato = true;
+            }else{
+                const elemento = document.querySelector(".p" + posicao);
+                elemento.classList.remove("selecionado");
+                valor_prato = 0;
+                prato = false;
+            }
+            calculaValor();
+        }
+
+
+        function getValorBebida(valor){
+            return valor;
+            calculaValor();
+        }
+        function getValorsobremesa(valor){
+            return valor;
+            calculaValor();
+        }
+    
+        function calculaValor(){
+            valorTotal = valor_bebida + valor_prato + valor_sobremesa;
+            const total = document.querySelector('.valorTotal');
+            total.innerHTML = `Valor Total: R$${valorTotal}`
+        }
+
+        
+    </script>
 </body>
 </html>

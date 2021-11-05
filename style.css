@@ -28,7 +28,14 @@ main{
     flex-direction: column;
 }
 .pratos{
-    margin: 5px;
+    margin-left: 10px;
+}
+.bebidas{
+    margin-left: 10px;
+}
+.sobremesas{
+    margin-left: 10px;
+    margin-bottom: 50px;
 }
 .categoria{
     font-weight: 500;
@@ -39,16 +46,33 @@ main{
 .menu-pratos{
     display: flex;
     overflow-x: scroll;
-}
 
+}
+.menu-bebidas{
+    display: flex;
+    overflow-x: scroll;
+}
+.menu-sobremesas{
+    display: flex;
+    overflow-x: scroll;
+}
 .pratos-opcao{
     margin-right: 13px;
     margin-bottom: 30px;
     padding: 0 10px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
-.pratos-opcao:hover{
-    border: 3px solid #D00303;
+.bebidas-opcao{
+    margin-right: 13px;
+    margin-bottom: 30px;
+    padding: 0 10px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.sobremesas-opcao{
+    margin-right: 13px;
+    margin-bottom: 30px;
+    padding: 0 10px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 img{
     margin: 5px;
@@ -71,8 +95,16 @@ img{
 }
 .finalizar-pedido{
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     margin-top: 30px;
+}
+.valor{
+    margin-bottom: 50px;
+    position: fixed;
+    bottom: 0;
+    background-color: green;
+    width: 100%;
+
 }
 button{
     position: fixed;
@@ -85,7 +117,11 @@ button{
     font-family: inherit;
     font-size: 100%;
     line-height: 1.15;
+    cursor: no-drop;
     
+}
+.selecionado{
+    border: 2px solid green;
 }
 button:hover{
     filter: brightness(110%);
